@@ -11,15 +11,15 @@ export default function ProjectCard({
   title,
   description,
   stack,
-  githubURL,
-  url,
+  githubUrl,
+  webSiteUrl,
 }: {
   image: string;
   title: string;
   description: string;
   stack: string[];
-  githubURL: string;
-  url: string;
+  githubUrl: string;
+  webSiteUrl: string;
 }): ReactElement {
   return (
     <article className={styles.card}>
@@ -48,14 +48,14 @@ export default function ProjectCard({
         </div>
         <div className={styles.card__info_urls}>
           <Link
-            href={githubURL}
+            href={githubUrl}
             target="_blank"
             className={styles.card__info_urls__url}
           >
             <Image src={github.src} alt={"github"} loading="lazy" fill />
           </Link>
           <Link
-            href={url}
+            href={webSiteUrl}
             target="_blank"
             className={styles.card__info_urls__url}
           >

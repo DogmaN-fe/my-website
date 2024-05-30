@@ -48,6 +48,7 @@ export default function Home() {
             веб-разработки.
           </p>
           <span className={styles.main__about_block__tech}>
+          {/* ToDo Перенести данные из всех Image в массив объектов  */}
             <div className={styles.main__about_block__tech_item}>
               <Image
                 src={
@@ -90,6 +91,7 @@ export default function Home() {
           <h1 className={styles.main__project_info__title}>Проекты</h1>
         </div>
         <div className={styles.main__project_card}>
+          {/* ToDo Перенести данные из всех ProjectCatd в массив объектов  */}
           <ProjectCard
             image={todo.src}
             title="ToDo list"
@@ -99,10 +101,9 @@ export default function Home() {
               "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-original.svg",
               nextjs.src,
             ]}
-            githubURL="https://github.com/DogmaN-fe/ToDo-List"
-            url="https://to-do-list-alpha-smoky.vercel.app/"
+            githubUrl="https://github.com/DogmaN-fe/ToDo-List"
+            webSiteUrl="https://to-do-list-alpha-smoky.vercel.app/"
           />
-
           <ProjectCard
             image={landing.src}
             title="Лэндинг"
@@ -112,8 +113,8 @@ export default function Home() {
               "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-original.svg",
               nextjs.src,
             ]}
-            githubURL="https://github.com/DogmaN-fe/ToDo-List"
-            url="https://to-do-list-alpha-smoky.vercel.app/"
+            githubUrl="https://github.com/DogmaN-fe/ToDo-List"
+            webSiteUrl="https://to-do-list-alpha-smoky.vercel.app/"
           />
         </div>
       </section>
