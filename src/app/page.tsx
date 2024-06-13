@@ -1,17 +1,14 @@
-"use client";
-
 import Image from "next/image";
-import { Provider } from "react-redux";
-import { store } from "./lib/redux-toolkit/store";
 import styles from "./page.module.sass";
 import Button from "./ui/button/button";
 import ProjectList from "./ui/projects-list/projects-list";
 
 import nextjs from "../../public/nextjs-original.svg";
+import StoreProvider from "./StoreProvider";
 
 export default function Home() {
   return (
-    <Provider store={store}>
+    <StoreProvider>
       <main id="main" className={styles.main}>
         <section className={styles.main__welcome}>
           <div className={styles.main__welcome_block}>
@@ -49,7 +46,6 @@ export default function Home() {
               свои навыки в области веб-разработки.
             </p>
             <span className={styles.main__about_block__tech}>
-              {/* ToDo Перенести данные из всех Image в массив объектов  */}
               <div className={styles.main__about_block__tech_item}>
                 <Image
                   src={
@@ -98,6 +94,6 @@ export default function Home() {
 
         {/* ToDo Оформить блок коонтакта со мной  */}
       </main>
-    </Provider>
+    </StoreProvider>
   );
 }

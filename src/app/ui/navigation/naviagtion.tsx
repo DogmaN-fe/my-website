@@ -20,7 +20,7 @@ export default function Navigation(): ReactElement {
             <Link href={"#Projects"}>Проекты</Link>
           </li>
         </ul>
-        <Button text={"Связаться"} href={"#Contact"} />
+        <Button text={"Связаться"} href={"#Projects"} />
       </span>
     </nav>
   );

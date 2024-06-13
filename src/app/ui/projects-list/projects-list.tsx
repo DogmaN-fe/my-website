@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactElement } from "react";
 import { useAppSelector } from "@/app/lib/redux-toolkit/store";
 import ProjectCard from "../project-card/project-card";
