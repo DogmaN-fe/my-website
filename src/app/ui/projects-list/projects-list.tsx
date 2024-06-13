@@ -9,7 +9,7 @@ export default function ProjectList(): ReactElement {
     <>
       {projects.map((el, index) => (
         <ProjectCard
-          key={`project-${index}`}
+          key={`project-${++index}`}
           image={el.imageSrc}
           title={el.title}
           description={el.description}

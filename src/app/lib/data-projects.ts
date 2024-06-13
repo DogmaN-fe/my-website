@@ -1,8 +1,8 @@
 import { IProject } from "./types";
 
-import todo from "../../../public/Снимок экрана 2024-05-30 202734.png";
-import nextjs from "../../../public/nextjs-original.svg";
-import landing from "../../../public/Снимок экрана 2024-05-30 202740.png";
+import todo from "/public/todo.png";
+import nextjs from "/public/nextjs-original.svg";
+import landing from "/public/landing.jpg";
 
 export const todoListObj: IProject = {
   imageSrc: todo.src,

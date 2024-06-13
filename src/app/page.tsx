@@ -5,13 +5,9 @@ import { Provider } from "react-redux";
 import { store } from "./lib/redux-toolkit/store";
 import styles from "./page.module.sass";
 import Button from "./ui/button/button";
-import ProjectCard from "./ui/project-card/project-card";
 import ProjectList from "./ui/projects-list/projects-list";
 
 import nextjs from "../../public/nextjs-original.svg";
-import todo from "../../public/Снимок экрана 2024-05-30 202734.png";
-import landing from "../../public/Снимок экрана 2024-05-30 202740.png";
-import { useAppSelector } from "./lib/redux-toolkit/store";
 
 export default function Home() {
   return (
@@ -99,6 +95,8 @@ export default function Home() {
             <ProjectList />
           </div>
         </section>
+
+        {/* ToDo Оформить блок коонтакта со мной  */}
       </main>
     </Provider>
   );
