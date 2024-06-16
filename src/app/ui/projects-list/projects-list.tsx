@@ -1,17 +1,20 @@
-"use client"
+"use client";
 
 import { ReactElement } from "react";
 import { useAppSelector } from "@/app/lib/redux-toolkit/store";
 import ProjectCard from "../project-card/project-card";
 
-export default function ProjectList(): ReactElement {
+/**
+ * Помогает загрузить карточки на сайт
+ */
+const ProjectList = () => {
   const projects = useAppSelector((state) => state.projectsSlice.webSite);
 
   return (
     <>
       {projects.map((el, index) => (
         <ProjectCard
-          key={`project-${++index}`}
+          key={`project-${index}`}
           image={el.imageSrc}
           title={el.title}
           description={el.description}
@@ -22,4 +25,6 @@ export default function ProjectList(): ReactElement {
       ))}
     </>
   );
-}
+};
+
+export default ProjectList;

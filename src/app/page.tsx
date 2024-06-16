@@ -1,10 +1,10 @@
 import styles from "./page.module.sass";
-import Button from "./ui/button/button";
+import Button from "./ui/link-button/link-button";
 import ProjectList from "./ui/projects-list/projects-list";
 import StoreProvider from "./StoreProvider";
 import Stack from "./ui/stack/stack";
 
-export default function Home() {
+const Page = () => {
   return (
     <StoreProvider>
       <main id="main" className={styles.main}>
@@ -60,4 +60,6 @@ export default function Home() {
       </main>
     </StoreProvider>
   );
-}
+};
+
+export default Page;

@@ -1,17 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ReactElement, useState } from "react";
-import styles from "./naviagtion.module.sass";
 
-import Button from "../button/button";
+import styles from "./naviagtion.module.sass";
 import menuClose from "/public/Mobile Menu Toggle.svg";
+
+import Button from "../link-button/link-button";
 import MobileMenu from "../mobile-menu/mobile-menu";
 
-export default function Navigation(): ReactElement {
+/**
+ * Навигация в header'е
+ */
+const Navigation = () => {
+  // Переменная для открытия меню на телефонах
   const [isOpen, setIsOpen] = useState(false);
 
+  /**
+   * Функция открытия/закрытия меню
+   */
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -34,16 +42,11 @@ export default function Navigation(): ReactElement {
       </span>
 
       <span className={styles.nav__navigation_menu}>
-        <Image
-          src={menuClose.src}
-          alt={"menu"}
-          fill
-          onClick={toggleMenu}
-        />
-        {isOpen && (
-          <MobileMenu toggleMenu={toggleMenu} />
-        )}
+        <Image src={menuClose.src} alt={"menu"} fill onClick={toggleMenu} />
+        {isOpen && <MobileMenu onClick={toggleMenu} />}
       </span>
     </nav>
   );
-}
+};
+
+export default Navigation;

@@ -1,6 +1,7 @@
 import nextjs from "/public/nextjs-original.svg";
 import { ITechImg } from "@/app/lib/types";
 
+// Набор технологий, которые я использую
 const technologies: ITechImg[] = [
   {
     src: "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-original.svg",

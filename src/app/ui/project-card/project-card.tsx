@@ -6,7 +6,10 @@ import Link from "next/link";
 import github from "../../../../public/Vector.svg";
 import website from "../../../../public/Vector (1).svg";
 
-export default function ProjectCard({
+/**
+ * Карточка проекта
+ */
+const ProjectCard = ({
   image,
   title,
   description,
@@ -20,7 +23,7 @@ export default function ProjectCard({
   stack: string[];
   githubUrl: string;
   webSiteUrl: string;
-}): ReactElement {
+}) => {
   return (
     <article className={styles.card}>
       <div className={styles.card__photo}>
@@ -65,4 +68,6 @@ export default function ProjectCard({
       </div>
     </article>
   );
-}
+};
+
+export default ProjectCard;

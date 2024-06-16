@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { TestFormObj, landingObj, todoListObj } from "../../data-projects";
+import projects from "../../data-projects";
 
+// Слайс с проектами
 export const projectsSlice = createSlice({
   name: "projects",
   initialState: {
-    webSite: [todoListObj, landingObj, TestFormObj],
+    webSite: projects,
   },
   reducers: {},
 });

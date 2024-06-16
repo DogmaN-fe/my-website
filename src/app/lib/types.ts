@@ -1,3 +1,6 @@
+/**
+ * Интерфейс для проекта
+ */
 export interface IProject {
   imageSrc: string;
   title: string;
@@ -7,6 +10,9 @@ export interface IProject {
   webSiteUrl: string;
 }
 
+/**
+ * Интерфейс для технологии
+ */
 export interface ITechImg {
   src: string;
   alt: string;

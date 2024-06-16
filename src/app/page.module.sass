@@ -90,6 +90,8 @@
 .button_projects
     background: #dbdbdb !important
     color: #133955 !important
+    &:not(:last-child)
+        margin-right: 61px
     &:hover
         background: #133955 !important
         color: #dbdbdb !important
@@ -105,3 +107,7 @@
             &_block
                 &__buttons
                     flex-direction: column
+    .button_projects
+        &:not(:last-child)
+            margin: 0
+            margin-bottom: 25px
