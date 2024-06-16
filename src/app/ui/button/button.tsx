@@ -12,8 +12,8 @@ export default function Button({
   href?: string;
 }): ReactElement {
   return (
-    <Link href={href}>
-      <button className={`${className} ${styles.button}`}>{text}</button>
+    <Link href={href} className={`${className} ${styles.button}`}>
+      {text}
     </Link>
   );
 }

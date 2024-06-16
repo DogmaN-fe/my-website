@@ -7,6 +7,14 @@
     border: #133955 2px solid
 
     transition: background 0.5s, color 0.5s
+    &:not(:last-child)
+        margin-right: 61px
     &:hover
         background: #dbdbdb
         color: #133955
+
+@media (max-width: 500px)
+    .button
+        &:not(:last-child)
+            margin: 0
+            margin-bottom: 25px

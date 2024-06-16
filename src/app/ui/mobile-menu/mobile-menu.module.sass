@@ -1,0 +1,35 @@
+.menu
+    display: flex
+
+    align-items: center
+
+    flex-direction: column
+
+    padding: 30px
+
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #ffffff
+
+    &__btn_close
+        display: block
+        position: relative
+        width: 50px
+        height: 50px
+
+        align-self: flex-end
+        margin-bottom: 173px
+
+    &__links
+        display: flex
+        flex-direction: column
+        align-items: center
+        &_link
+            font-size: 24px
+            font-weight: 500
+            text-align: center
+            &:not(:last-child)
+                margin-bottom: 25px

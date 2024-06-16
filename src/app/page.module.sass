@@ -24,7 +24,7 @@
     margin-bottom: 35px
 
 .main
-    padding: 146px 0 0 0
+    padding: 146px 20px 0
     &__welcome
         @include section
 
@@ -46,6 +46,7 @@
             &__buttons
                 display: flex
                 justify-content: center
+
     &__about
         @include section
 
@@ -63,14 +64,12 @@
 
             &__description
                 @include description
-            
+
     &__project
         @include section
 
         flex-direction: column
         align-items: center
-
-        padding: 0 20px 
 
         &_info
             @include block
@@ -91,7 +90,18 @@
 .button_projects
     background: #dbdbdb !important
     color: #133955 !important
-    margin-right: 61px
     &:hover
         background: #133955 !important
         color: #dbdbdb !important
+
+@media (max-width: 780px)
+    .main
+        &__project
+            &_cards
+                grid-template-columns: minmax(320px, 780px)
+@media (max-width: 500px)
+    .main
+        &__welcome
+            &_block
+                &__buttons
+                    flex-direction: column
