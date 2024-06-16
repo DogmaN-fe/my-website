@@ -1,14 +1,15 @@
 import { IProject } from "./types";
 
 import todo from "/public/todo.png";
-import nextjs from "/public/nextjs-original.svg";
 import landing from "/public/landing.jpg";
+import testForm from "/public/test-from.png";
+import nextjs from "/public/nextjs-original.svg";
 
 export const todoListObj: IProject = {
   imageSrc: todo.src,
   title: "ToDo list",
   description:
-    "Простоя реализация списка дел, в котором есть три секции: Todo, working и done.",
+    "Список дел, в котором есть три секции: Todo, working и done. ",
   stack: [
     "https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg",
     "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-original.svg",
@@ -21,7 +22,7 @@ export const todoListObj: IProject = {
 export const landingObj: IProject = {
   imageSrc: landing.src,
   title: "Лэндинг",
-  description: "Пример верстки лендинга отеля.",
+  description: "Лендинга отеля.",
   stack: [
     "https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg",
     "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-original.svg",
@@ -29,4 +30,17 @@ export const landingObj: IProject = {
   ],
   githubUrl: "https://github.com/DogmaN-fe/Ovinograd-",
   webSiteUrl: "https://ovinograd.vercel.app",
+};
+
+export const TestFormObj: IProject = {
+  imageSrc: testForm.src,
+  title: "Форма теста",
+  description: "Форма для решения теста, с возможностью добавления новых вопросов",
+  stack: [
+    "https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg",
+    "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-original.svg",
+    "https://github.com/devicons/devicon/raw/master/icons/redux/redux-original.svg",
+  ],
+  githubUrl: "https://github.com/DogmaN-fe/test-form",
+  webSiteUrl: "https://dogman-fe.github.io/test-form/",
 };
