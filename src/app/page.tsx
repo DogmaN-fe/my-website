@@ -1,7 +1,7 @@
 import Button from "./ui/LinkButton/LinkButton";
 import ProjectList from "./ui/ProjectsList/ProjectsList";
 import StoreProvider from "./StoreProvider";
-import MyStack from "./ui/MyStack/MyStack";
+import Stack from "./ui/Stack/Stack";
 import ContactForm from "./ui/ContactForm/ContactForm";
 import styles from "./page.module.sass";
 
@@ -44,7 +44,7 @@ const Page = () => {
               пользовательские интерфейсы, а также постоянно совершенствовать
               свои навыки в области веб-разработки.
             </p>
-            <MyStack />
+            <Stack />
           </div>
         </section>
 
