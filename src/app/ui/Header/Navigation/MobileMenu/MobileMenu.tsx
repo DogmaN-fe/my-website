@@ -1,11 +1,9 @@
-"use client";
-
 import { MouseEventHandler } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./mobile-menu.module.sass";
+import styles from "./MobileMenu.module.sass";
 
-import Button from "../link-button/link-button";
+import Button from "../../../LinkButton/LinkButton";
 import menuOpen from "/public/Mobile Menu Toggle Open.svg";
 
 /**
@@ -19,9 +17,9 @@ const MobileMenu = ({
   return (
     <div className={styles.menu}>
       <span className={styles.menu__btn_close}>
-        <Image src={menuOpen} alt={"menu"} onClick={onClick} fill />
+        <Image src={menuOpen} alt={"menu"} onClick={onClick} layout="fill" />
       </span>
-      <ul className={styles.menu__inks}>
+      <ul className={styles.menu__links}>
         <li className={styles.menu__links_link}>
           <Link href={"#main"} onClick={onClick}>
             Главная
@@ -38,7 +36,7 @@ const MobileMenu = ({
           </Link>
         </li>
         <li className={styles.menu__links_link} onClick={onClick}>
-          <Button text={"Связаться"} href={"#Projects"} />
+          <Button text={"Связаться"} href={"#Contact"} />
         </li>
       </ul>
     </div>

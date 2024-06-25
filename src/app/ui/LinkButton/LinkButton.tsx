@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./link-button.module.sass";
+import styles from "./LinkButton.module.sass";
 
 /**
  * Кастомная кнопка для перехода к нужной секции блока (Внимание: Это костамизированый тэг Link, имметирующий кнопку)

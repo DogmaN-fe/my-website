@@ -1,8 +1,9 @@
 import styles from "./page.module.sass";
-import Button from "./ui/link-button/link-button";
-import ProjectList from "./ui/projects-list/projects-list";
+import Button from "./ui/LinkButton/LinkButton";
+import ProjectList from "./ui/ProjectsList/ProjectsList";
 import StoreProvider from "./StoreProvider";
-import Stack from "./ui/stack/stack";
+import Stack from "./ui/Stack/Stack";
+import ContactForm from "./ui/ContactForm/ContactForm";
 
 const Page = () => {
   return (
@@ -25,7 +26,7 @@ const Page = () => {
                 href="#Projects"
                 className={styles.button_projects}
               />
-              <Button text="Связаться" href="#Contatc" />
+              <Button text="Связаться" href="#Contact" />
             </span>
           </div>
         </section>
@@ -57,6 +58,12 @@ const Page = () => {
         </section>
 
         {/* ToDo Оформить блок коонтакта со мной  */}
+        <section id="Contact" className={styles.main__contact}>
+          <div className={styles.main__contact_info}>
+            <h2 className={styles.main__contact_info__title}>Связаться</h2>
+          </div>
+          <ContactForm />
+        </section>
       </main>
     </StoreProvider>
   );

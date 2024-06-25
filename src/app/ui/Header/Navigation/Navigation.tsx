@@ -1,28 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { ReactElement, useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./naviagtion.module.sass";
+import styles from "./Navigation.module.sass";
 import menuClose from "/public/Mobile Menu Toggle.svg";
 
-import Button from "../link-button/link-button";
-import MobileMenu from "../mobile-menu/mobile-menu";
+import Button from "../../LinkButton/LinkButton";
+import MobileMenu from "./MobileMenu/MobileMenu";
 
 /**
  * Навигация в header'е
  */
-const Navigation = () => {
+const Navigation = (): ReactElement => {
   // Переменная для открытия меню на телефонах
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   /**
    * Функция открытия/закрытия меню
    */
-  const toggleMenu = () => {
+  const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
-  };
+  }, [isOpen]);
 
   return (
     <nav className={styles.nav}>
@@ -38,11 +38,17 @@ const Navigation = () => {
             <Link href={"#Projects"}>Проекты</Link>
           </li>
         </ul>
-        <Button text={"Связаться"} href={"#Contatc"} />
+        <Button text={"Связаться"} href={"#Contact"} />
       </span>
 
-      <span className={styles.nav__navigation_menu}>
-        <Image src={menuClose.src} alt={"menu"} fill onClick={toggleMenu} />
+      <span className={styles.nav__menu}>
+        <Image
+          src={menuClose.src}
+          alt={"menu"}
+          fill
+          onClick={toggleMenu}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
         {isOpen && <MobileMenu onClick={toggleMenu} />}
       </span>
     </nav>

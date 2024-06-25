@@ -71,6 +71,8 @@
         flex-direction: column
         align-items: center
 
+        margin-bottom: 88px
+
         &_info
             @include block
 
@@ -86,6 +88,23 @@
             grid-template-columns: repeat(2,minmax(320px, 494px))
 
             gap: 110px
+    &__contact
+
+        @include section
+        flex-direction: column
+        align-items: center
+
+        margin-bottom: 130px
+        &_info
+            @include block
+
+            margin-bottom: 55px
+            &__title
+                @include after_title()
+
+                font-size: 36px
+
+                position: relative
 
 .button_projects
     background: #dbdbdb !important
