@@ -1,9 +1,9 @@
-import styles from "./page.module.sass";
 import Button from "./ui/LinkButton/LinkButton";
 import ProjectList from "./ui/ProjectsList/ProjectsList";
 import StoreProvider from "./StoreProvider";
 import Stack from "./ui/Stack/Stack";
 import ContactForm from "./ui/ContactForm/ContactForm";
+import styles from "./page.module.sass";
 
 const Page = () => {
   return (
