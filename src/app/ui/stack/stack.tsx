@@ -13,6 +13,7 @@ const Stack = () => {
     (state) => state.technologiesSlice.tech
   );
 
+  
   return (
     <div className={styles.tech}>
       {technologies.map((item) => (
