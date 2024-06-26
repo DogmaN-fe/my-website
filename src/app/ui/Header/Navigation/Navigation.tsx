@@ -29,16 +29,16 @@ const Navigation = (): ReactElement => {
       <span className={styles.nav__navigation}>
         <ul className={styles.nav__navigation_links}>
           <li className={styles.nav__navigation_links__link}>
-            <Link href={"#main"}>Главная</Link>
+            <Link href={"#main"} aria-label="На главную">Главная</Link>
           </li>
           <li className={styles.nav__navigation_links__link}>
-            <Link href={"#About"}>Обо мне</Link>
+            <Link href={"#About"} aria-label="Обо мне">Обо мне</Link>
           </li>
           <li className={styles.nav__navigation_links__link}>
-            <Link href={"#Projects"}>Проекты</Link>
+            <Link href={"#Projects"} aria-label="Проекты">Проекты</Link>
           </li>
         </ul>
-        <Button text={"Связаться"} href={"#Contact"} />
+        <Button text={"Связаться"} href={"#Contact"} aria-label="Связаться"/>
       </span>
 
       <span className={styles.nav__menu}>
@@ -47,7 +47,6 @@ const Navigation = (): ReactElement => {
           alt={"menu"}
           fill
           onClick={toggleMenu}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {isOpen && <MobileMenu onClick={toggleMenu} />}
       </span>

@@ -14,8 +14,8 @@ const LinkButton = ({
   href?: string;
 }) => {
   return (
-    <Link href={href} className={`${styles.button} ${className}`}>
-      {text}
+    <Link href={href}>
+      <button className={`${styles.button} ${className}`}>{text}</button>
     </Link>
   );
 };

@@ -9,7 +9,7 @@ import styles from "./Header.module.sass";
 const Header = (): ReactElement => {
   return (
     <header className={styles.header}>
-      <Link href={"/"} className={styles.header__logo} passHref>
+      <Link href={"/"} className={styles.header__logo} aria-label="На главную">
         My.Site
       </Link>
       <Navigation />
